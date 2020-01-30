@@ -47,6 +47,19 @@ const collapseAndShow = () => {
 	});
 };
 
+const iconChangeOnLoad = () => {
+	let icon = document.querySelector("#deviconLoad");
+	let iconArray = ["html5-plain", "css3-plain", "javascript-plain", "bootstrap-plain", "sass-original", "jquery-plain", "nodejs-plain", "express-original-wordmark", "mongodb-plain-wordmark", "git-plain", "github-plain", "webpack-plain", "babel-plain", "heroku-original-wordmark", "gulp-plain"];
+	let randomIndex = iconArray[Math.floor(Math.random() * iconArray.length)];
+
+	iconArray.forEach((currentIcon, index) => {
+			icon.setAttribute("class", `devicon-${randomIndex}`);
+	});
+
+
+
+}
+
 const iconChange = () => {
 	let icon = document.querySelector("#devicon");
 	// NOTE: Current class of the icon is: devicon-html5-plain`;
@@ -122,6 +135,7 @@ class TypeWriter {
 const init = () => {
 	setInterval(nextSlide, 5000);
 	collapseAndShow();
+	iconChangeOnLoad();
 	iconChange();
 	typeWriterEffect();
 };

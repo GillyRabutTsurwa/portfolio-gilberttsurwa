@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Kulim+Park:400,400i,600,600i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+::selection {
+	background: #3d3d3d;
+	color: antiquewhite;
+}
+
+* {
+
+	&,
+	&::before,
+	&::after {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-image: -webkit-gradient(linear, left top, right bottom, from(#fbdb89), to(#f48982));
+	background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+	font-family: 'Kulim Park', Arial, Helvetica, sans-serif;
+	position: relative; // TESTING: TEMPORARY
+}
+
+.loader {
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-transition: opacity 0.2s ease-in;
+	-webkit-transition: opacity 2s ease-in;
+	transition: opacity 2s ease-in;
+
+	& i {
+		font-size: 40rem;
+	}
+}
+
+.maincontent {
+	opacity: 0;
+	display: none;
+	position: relative;
+	z-index: 500;
+
+	-webkit-transition: opacity 0.2s ease-in;
+	-webkit-transition: opacity 2s ease-in;
+	transition: opacity 2s ease-in;
+}

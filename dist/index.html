@@ -15,8 +15,29 @@
 <body>
     <!-- SECTION: Header -->
     <div class="loader">
-        <i class="fas fa-sync-alt"></i>
+        <i id="deviconLoad"></i>
     </div>
+
+        <!-- SECTION: Navigation -->
+    <div class="navigation">
+        <input type="checkbox" name="navigation" id="navi-toggle" class="navigation__checkbox">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon"></span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__nav--list">
+                <li class="navigation__nav--list-item"><a href="#" class="navigation__nav--list-link">About Natours</a>
+                </li>
+                <li class="navigation__nav--list-item"><a href="#" class="navigation__nav--list-link">Benefits</a></li>
+                <li class="navigation__nav--list-item"><a href="#" class="navigation__nav--list-link">Popular Tours</a>
+                </li>
+                <li class="navigation__nav--list-item"><a href="#" class="navigation__nav--list-link">Stories</a></li>
+                <li class="navigation__nav--list-item"><a href="#" class="navigation__nav--list-link">Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
+
 
     <!-- SECTION: Header -->
     <div class="maincontent">
@@ -43,13 +64,164 @@
         <main class="main-parts">
             <article class="item">
                 <div class="info__heading">
-                    <div class="info__heading--title">CSS Work</div>
+                    <div class="info__heading--title">CSS Projects</div>
                     <span class="info__heading--arrow"></span>
                 </div>
 
                 <div class="info__toggleAppear">
-                    <div class="info">
-                        <div class="info__left">
+                    <div class="info info__cards">
+
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="card__title first">
+                                    <span>Omnifood</span>
+                                </div>
+                                <div class="card__links">
+                                    <a href="https://omnifood-gilberttsurwa-jonas.netlify.com/" target="_blank"
+                                        class="card__button first">Link to Website</a>
+                                    <a href="https://github.com/GillyRabutTsurwa/omnifood-gilberttsurwa-jonas"
+                                        target="_blank" class="card__button first">Link to Code
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="card__title second">
+                                    <span>Natours</span>
+                                </div>
+                                <div class="card__links">
+                                    <a href="https://natours-gilberttsurwa-jonas.netlify.com/" target="_blank"
+                                        class="card__button second">Link to Website</a>
+                                    <a href="https://github.com/GillyRabutTsurwa/natours-jonas-inspired" target="_blank"
+                                        class="card__button second">Link to Code
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="card__title second">
+                                    <span>Trillo</span>
+                                </div>
+                                <div class="card__links">
+                                    <a href="#" target="_blank" class="card__button second">Link to Website</a>
+                                    <a href="#" target="_blank" class="card__button second">Link to Code
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="centre-align-text" style="width: 100%; margin-bottom: 2rem;"> 
+                            <span>CORE SKILLS</span>
+                        </div>
+                        <ul>
+                            <li>Sass: variables, mixins, extends</li>
+                            <li>CSS transitions and animations</li>
+                            <li>Responsive web design</li>
+                            <li>Flexbox</li>
+                            <li>CSS Grid</li>
+                        </ul>
+
+
+
+                        <!-- <div class="card">
+                            <div class="card__front">
+                                <div class="card__front--image third">
+                                    <span>Trillo</span>
+                                </div>
+
+                            </div>
+                            <div class="card__back">
+                                <p class="card__back--about">My first website project. I got my hands dirty with HTML
+                                    CSS and jQuery making this
+                                    website, I also worked on making it a little responsive.
+                                </p>
+                                <div class="card__back--links">
+                                    <a href="#" target="_blank" class="card__button third">Link to Website</a>
+                                    <a href="#" target="_blank" class="card__button third">Link to Code
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="card">
+                            <div class="card__front">
+                                <div class="card__front--image fourth">
+                                    <span>Nexter</span>
+                                </div>
+
+                            </div>
+                            <div class="card__back">
+                                <p class="card__back--about">My first website project. I got my hands dirty with HTML
+                                    CSS and jQuery making this
+                                    website, I also worked on making it a little responsive.
+                                </p>
+                                <div class="card__back--links">
+                                    <a href="#" target="_blank" class="card__button fourth>Link to Website</a>
+                                    <a href=" #" target="_blank" class="card__button fourth>Link to Code
+                                        <i class=" devicon-github-plain"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="card">
+                            <div class="card__front">
+                                <div class="card__front--image fifth">
+                                    <span>Grandma's Sweets</span>
+                                </div>
+
+                            </div>
+                            <div class="card__back">
+                                <p class="card__back--about">My first website project. I got my hands dirty with HTML
+                                    CSS and jQuery making this
+                                    website, I also worked on making it a little responsive.
+                                </p>
+                                <div class="card__back--links">
+                                    <a href="#" target="_blank" class="card__button fifth">Link to Website</a>
+                                    <a href="#" target="_blank" class="card__button fifth">Link to Code
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="card">
+                            <div class="card__front">
+                                <div class="card__front--image sixth">
+                                    <span>Sixth</span>
+                                </div>
+
+                            </div>
+                            <div class="card__back">
+                                <p class="card__back--about">My first website project. I got my hands dirty with HTML
+                                    CSS and jQuery making this
+                                    website, I also worked on making it a little responsive.
+                                </p>
+                                <div class="card__back--links">
+                                    <a href="#" target="_blank" class="card__button sixth">Link to Website</a>
+                                    <a href="#" target="_blank" class="card__button sixth">Link to Code
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+
+
+
+
+
+
+                        <!-- <div class="info__left">
                             <ul>
                                 <li>
                                     <a href="https://omnifood-gilberttsurwa-jonas.netlify.com/"
@@ -72,14 +244,14 @@
                                 media queries, as well as CSS Flexbox and CSS Grids, which are very important and
                                 lighten the burdern on responsive web design.
                             </p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </article>
             <!-- NOTE: COLLAPSIBLE PART 1 -->
             <article class="item">
                 <div class="info__heading">
-                    <div class="info__heading--title">Javascript</div>
+                    <div class="info__heading--title">Javascript Projects</div>
                     <!-- <span class="info__heading--arrow">&#8593;</span> -->
                     <span class="info__heading--arrow"></span>
                 </div>
@@ -89,38 +261,74 @@
                     <div class="info">
                         <div class="info__left">
                             <ul>
-                                <li><a href="https://app.netlify.com/sites/colourgame-gilberttsurwa-colt/overview"
-                                        target="__blank">Colour
-                                        Guessing Game</a></li>
-                                <li><a href="https://gilbert-tsurwa-forkify.herokuapp.com/" target="__blank">Forkify</a>
+                                <li>
+                                    Roll-Dice Game
+                                    <a href="#" target="__blank">
+                                        <i class="devicon-devicon-plain"></i>
+                                    </a>
+                                    <a href="#" target="__blank">
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
                                 </li>
-                                <li><a href="https://booklist-gilberttsurwa-brad.netlify.com/" target="__blank">Booklist
-                                        App</a>
+
+                                <li>
+                                    Forkify
+                                    <a href="https://gilbert-tsurwa-forkify.herokuapp.com/" target="__blank" class="code-web-links">
+                                        <i class="devicon-devicon-plain"></i>
+                                    </a>
+                                    <a href="https://gilbert-tsurwa-forkify.herokuapp.com/" target="__blank" class="code-web-links">
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
                                 </li>
-                                <li><a href="https://bookorama-gilberttsurwa-netninja.netlify.com/"
-                                        target="__blank">Book-O-Rama</a>
+
+                                <li>
+                                    Colour Game
+                                    <a href="https://app.netlify.com/sites/colourgame-gilberttsurwa-colt/overview"
+                                        target="__blank" class="code-web-links">
+                                        <i class="devicon-devicon-plain"></i>
+                                    </a>
+                                    <a href="https://app.netlify.com/sites/colourgame-gilberttsurwa-colt/overview"
+                                        target="__blank" class="code-web-links">
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    Booklist App
+                                    <a href="https://booklist-gilberttsurwa-brad.netlify.com/" target="__blank" class="code-web-links">
+                                        <i class="devicon-devicon-plain"></i>
+                                    </a>
+                                    <a href="https://booklist-gilberttsurwa-brad.netlify.com/" target="__blank" class="code-web-links">
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    Task List App
+                                    <a href="https://tasklist-gilberttsurwa-brad.netlify.com/" target="__blank" class="code-web-links">
+                                        <i class="devicon-devicon-plain"></i>
+                                    </a>
+                                    <a href="https://tasklist-gilberttsurwa-brad.netlify.com/" target="__blank" class="code-web-links">
+                                        <i class="devicon-github-plain"></i>
+                                    </a>
                                 </li>
 
 
                             </ul>
                         </div>
                         <div class="info__right">
-                            <p class="info__right--paragraph">
-                                Iquitos am Amazonas, 1984: Irina ist gemeinsam mit ihrem Freund Hilmar auf der Suche
-                                nach ihrem Zwillingsbruder. Thomas war Teil der Filmcrew um Werner Herzog und Klaus
-                                Kinski, ist jedoch nach Abschluss der Dreharbeiten zu „Fitzcarraldo“ spurlos
-                                verschwunden. Entlang der großen Flüsse reisen die beiden in den Regenwald des
-                                Amazonasbeckens und tief hinein in die Abgründe menschlicher Hoffnungen und
-                                Sehnsüchte.
-                            </p>
-                            <p class="info__right--paragraph">
-                                Auf mehreren Ebenen erzählt „Stromland“ von Verschollenen und der Suche nach dem
-                                richtigen Leben, nach unberührten Orten und neuen Wahrheiten. Dabei führt der Roman
-                                durch drei Jahrhunderte, in denen Auswanderer und Abenteurer ihre Spuren
-                                hinterlassen
-                                haben, und verknüpft Orte, Personen und Familiengeschichten über die Zeit hinweg zu
-                                einem engen Netz, in dem sich alle Figuren verfangen haben.
-                            </p>
+                            <div class="info__right--paragraph">
+                                <div class="centre-align-text">
+                                    <span class="info__right--title">Core Skills Learnt:</span>
+                                </div>
+                                
+                                <ul>
+                                    <li>DOM Manipulation</li>
+                                    <li>Asynchronous programming: Callbacks, promises, async/await</li>
+                                    <li>Consuming APIs: AJAX, fetch and axios</li>
+                                    <li>Proficient ES6 Javascript</li>
+                                    <li>Webpack & Babel</li>
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,144 +355,28 @@
                         </div>
                         <div class="info__right">
                             <p class="info__right--paragraph">
-                                Als „Wolfserwartungsland“ werden Regionen bezeichnet, die für eine Wiederansiedlung
-                                des
-                                Wolfs günstige Bedingungen bieten. Eine solch strukturschwache, naturbelassene
-                                Gegend
-                                wird in Florian Wackers gleichnamigem Theaterdebüt zum Schauplatz für eine Handvoll
-                                Figuren, die schon bessere Tage gesehen haben – genau wie das abgelegene Hotel, in
-                                dem
-                                sie einander begegnen. </p>
-                            <p class="info__right--paragraph">
-                                Dem Wirt Roman ist die Anwesenheit seiner Geliebten und Angestellten Juliette, für
-                                die
-                                er den Wolf töten möchte, zum Leben genug. Juliette wiederum, die es in die Stadt
-                                zieht,
-                                nimmt es mit der Treue nicht so genau. Und Jockel, der beobachtende Dauergast, sitzt
-                                und
-                                trinkt. Die Atmosphäre des Wartens und Erwartens endet mit der Ankunft zweier
-                                Fremder:
-                                des vermeintlichen Jägers Viktor und des Spekulanten Wolf. </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <!-- NOTE: PART 3 -->
-            <article class="item">
-                <div class="info__heading">
-                    <div class="info__heading--title">Dahlenberger (2018)</div>
-                    <!-- <span class="info__heading--arrow">&#8593;</span> -->
-                    <span class="info__heading--arrow"></span>
-                </div>
-
-                <div class="info__title"></div>
-                <div class="info__toggleAppear">
-                    <div class="info">
-                        <div class="info__left">
-                            <address>
-                                216 Seiten
-                                Gebunden in Schutzumschlag
-                                Verlag Jacoby & Stuart 2015
-                                ISBN 978-3-942787-69-7
-                            </address>
-                        </div>
-                        <div class="info__right">
-                            <p class="info__right--paragraph">
-                                „Dahlenberger“ erzählt die Geschichte eines Sommers, vom Chlorgeschmack auf der
-                                Haut,
-                                von salzigen Fritten, ersten erotischen Avancen und davon, wie ein paar sauber
-                                gesprungene Arschbomben tiefe Krater reißen. Nur Jan weiß, dass dieser Sommer, in
-                                dem
-                                sie alle – er selbst, Klara, Hank, Elli und Jonas – erwachsen werden, ihr letzter
-                                gemeinsamer ist. Florian Wacker erzählt mit solcher Eindringlichkeit und
-                                Leichtigkeit,
-                                dass man die Sonne auf der Haut zu spüren scheint.
+                                Having sufficient knowledge of ES6 Javascript, I have begun learning React. I've been
+                                making simple programmes that helped me refine my modern Javascript skills, as well as
+                                pick up and practise crucial concepts such as props and
+                                state
+                                Wanting to be a Front-End / Javascript Developper, Learning frameworks is a
+                                crucial part to web development and I intend on being adept on the framework as time
+                                goes by.
                             </p>
                             <p class="info__right--paragraph">
-                                Eigentlich ist dieser Sommer wie alle vorigen auch. Heiß und sonnig. Jan und seine
-                                Freunde Hank, Klara, Jonas und Elli verbringen jede freie Minute im Freibad und üben
-                                den
-                                perfekten Sprung. Dann taucht plötzlich dieser Junge auf, macht eine tadellose
-                                Arschbombe und verschwindet. Nun ist nichts mehr wie zuvor.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="item">
-                <div class="info__heading">
-                    <div class="info__heading--title">Albuquerque (2018)</div>
-                    <!-- <span class="info__heading--arrow">&#8593;</span> -->
-                    <span class="info__heading--arrow"></span>
-                </div>
-
-                <div class="info__toggleAppear">
-                    <div class="info">
-                        <div class="info__left">
-                            <address>
-                                160 Seiten
-                                Leineneinband mit Lesebändchen
-                                mairisch Verlag 2014
-                                ISBN 978-3-938539-32-3
-                            </address>
-                        </div>
-                        <div class="info__right">
-                            <p class="info__right--paragraph">
-                                Der neue Junge setzt im Freibad die genialste Arschbombe aller Zeiten ins Becken,
-                                verschwindet danach aber spurlos. Eine Eule heilt die Ängste eines Busfahrers. In
-                                Albuquerque wartet ein alter Trainer auf eine neue Hüfte. Amateurfunker Muffe wird
-                                erschlagen. Und während Budde in der Kühlhalle der Fleischfabrik arbeitet, schneit
-                                es
-                                draußen.
-                            </p>
-                            <p class="info__right--paragraph">
-                                Alle Figuren teilen das gleiche vage Gefühl: Sie haben eine Vorahnung, dass sich
-                                etwas
-                                verändern wird. Und auch wenn die meisten von ihnen einfache Leute sind, Busfahrer,
-                                Bauarbeiter, Maler, Pfleger, haben sie doch alle eine Idee davon, was es bedeutet,
-                                wirklich intensiv zu leben – und dass es dazu notwendig sein kann, aus seinem ganz
-                                normalen Leben auszusteigen. Und so treffen sie Entscheidungen, die sie für immer
-                                beeinflussen werden.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="item">
-                <div class="info__heading">
-                    <div class="info__heading--title">Kerstin Preiwuß (2018)</div>
-                    <!-- <span class="info__heading--arrow">&#8593;</span> -->
-                    <span class="info__heading--arrow"></span>
-                </div>
-
-                <div class="info__toggleAppear">
-                    <div class="info">
-                        <div class="info__left">
-                            <link>
-                            www.kerstin-preiwuss.de
-                            </link>
-                        </div>
-                        <div class="info__right">
-                            <p class="info__right--paragraph">
-                                Website für die Leipziger Autorin Kerstin Preiwuß. Die Seite setzt auf den Minimal
-                                Design-Ansatz mit viel Weißraum und zeichnet sich durch ein klares User Interface
-                                aus. Ein Blog und ein einfacher Player für Audio-Files runden die Website ab.
+                                Although the React Apps I built are not substantial in content and significance, as I am
+                                still a beginner at it, I still focus on writing code that is clean and intentionally
+                                organised.
+                                These apps
                             </p>
                         </div>
                     </div>
                 </div>
             </article>
         </main>
-
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="JS/index.js"></script>
+<script src="js/index.js"></script>
 
 </html>

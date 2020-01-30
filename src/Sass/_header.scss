@@ -1,0 +1,97 @@
+.header {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+
+	& #devicon {
+		display: block;
+		position: absolute;
+		top: 3rem;
+		left: 3rem;
+		font-size: 9.5rem;
+		z-index: 1000;
+		-webkit-animation: fade 3800ms ease-in-out infinite;
+		animation: fade 3800ms ease-in-out infinite;
+	}
+
+	&__title {
+		position: absolute;
+		top: 15%;
+		right: 5%;
+		display: inline-block;
+		text-align: right;
+		padding-right: 7rem;
+		margin-bottom: 7rem;
+		z-index: 1000;
+
+		&--primary {
+			font-size: 15rem;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		&--secondary {
+			font-size: 4rem;
+		}
+	}
+
+	&__slider {
+		height: 100%;
+		width: 100%;
+		position: relative;
+
+		&--slide {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			opacity: 0;
+			-webkit-transition: opacity 0.75s ease-in-out;
+			transition: opacity 0.75s ease-in-out;
+
+			&.current {
+				opacity: 1;
+			}
+
+			&:first-child {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/artem-bali-682651-unsplash-min.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/artem-bali-682651-unsplash-min.jpg);
+			}
+
+			&:nth-child(2) {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/brooke-lark-261793-unsplash-min.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/brooke-lark-261793-unsplash-min.jpg);
+			}
+
+			&:nth-child(3) {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/erik-dungan-1079095-unsplash-min.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/erik-dungan-1079095-unsplash-min.jpg);
+			}
+
+			&:nth-child(4) {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/ivan-timov-663072-unsplash-min.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/ivan-timov-663072-unsplash-min.jpg);
+			}
+
+			&:last-child {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/brooke-lark-385507-unsplash-min.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/brooke-lark-385507-unsplash-min.jpg);
+			}
+		}
+	}
+}

@@ -1,0 +1,143 @@
+.main-parts {
+	padding-right: 7rem;
+	margin-bottom: 7rem;
+}
+
+.info__toggleAppear {
+	display: none;
+}
+
+.info__toggleAppear.collapse {
+	display: block;
+}
+
+.info__heading {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	cursor: pointer;
+
+	&--title {
+		font-size: 6rem;
+		cursor: pointer;
+		position: relative;
+		margin-bottom: 3.5rem;
+		margin-right: auto;
+		margin-left: auto;
+		//NEW:
+		display: inline-block;
+	}
+
+	&--arrow::after {
+		content: "\2191";
+		font-size: 7rem;
+		padding-right: 3rem;
+		cursor: pointer;
+	}
+
+	&.toggled &--arrow::after {
+		content: "\2193";
+	}
+}
+
+.info {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 4rem;
+	margin-right: 7rem;
+
+	&__left {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 40%;
+		flex: 0 0 40%;
+		margin-right: 3.5rem;
+
+		& ul {
+			list-style: none;
+
+			& li {
+				font-family: 'Roboto', sans-serif;
+				margin-bottom: 3rem;
+			}
+
+			& a {
+				-webkit-backface-visibility: hidden;
+
+				backface-visibility: hidden;
+
+
+
+				&:link,
+				&:visited {
+					text-decoration: none;
+					color: #000;
+					-webkit-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+					-webkit-animation: pulse 5s ease-in infinite;
+					animation: pulse 5s ease-in infinite;
+				}
+
+				&:hover,
+				&:active {
+					font-size: 4.75rem;
+				}
+			}
+		}
+
+		& a {}
+	}
+
+	&__right {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 60%;
+		flex: 0 0 60%;
+
+		&--title {
+			font-size: 5rem;
+			margin-bottom: 0.5rem;
+		}
+
+		ul {
+			margin-top: 3rem;
+			list-style: none;
+			font-size: 3.5rem;
+			text-align: center;
+
+			li {
+				margin-bottom: 3rem;
+			}
+		}
+
+		&--paragraph {
+			font-size: 2.2rem;
+			line-height: 3rem;
+			margin-bottom: 3.5rem;
+		}
+	}
+}
+
+.info__cards {
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+
+	ul {
+		margin: 0 auto;
+		list-style: none;
+		text-align: center;
+
+		li {
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.item {
+	padding: 2rem 0 0 3rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid #333;
+}
