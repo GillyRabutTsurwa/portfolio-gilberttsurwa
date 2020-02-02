@@ -11,6 +11,42 @@
 	background-color: $card-background-colour;
 }
 
+.header__button {
+	display: inline-block;
+	border: 2px solid #000;
+	border-radius: 1rem;
+	font-size: 1.5rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	padding: 1.5rem 3rem;
+	margin-top: 3rem;
+	background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(247, 140, 140)), to(rgb(243, 247, 197)));
+	background-image: linear-gradient(to bottom right, rgb(247, 140, 140), rgb(243, 247, 197));
+	cursor: pointer;
+
+	-webkit-animation: pulseHeaderButton 5s ease-in 2.5s infinite;
+
+	animation: pulseHeaderButton 5s ease-in 2.5s infinite;
+
+	-webkit-transition: all 0.5s ease-in;
+
+	transition: all 0.5s ease-in;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		background-image: -webkit-gradient(linear, right bottom, left top, from(rgb(247, 140, 140)), to(rgb(243, 247, 197)));
+		background-image: linear-gradient(to top left, rgb(247, 140, 140), rgb(243, 247, 197));
+		-webkit-animation-play-state: paused;
+		        animation-play-state: paused;
+
+
+	}
+}
+
 .card__button {
 	display: inline-block;
 	font-size: 3rem;

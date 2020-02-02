@@ -14,9 +14,7 @@ const loading = () => {
 
 const nextSlide = () => {
 	const slides = document.querySelectorAll(".header__slider--slide");
-	// console.log(slides);
 	const current = document.querySelector(".current");
-	let intervalTime = 5000;			
 	let nextImage = current.nextElementSibling;
 
 	current.classList.remove("current");
@@ -26,7 +24,7 @@ const nextSlide = () => {
 	else {
 		slides[0].classList.add("current");
 	}
-	setTimeout(() => current.classList.remove("current"))
+	setTimeout(() => current.classList.remove("current"));
 }
 
 
@@ -132,12 +130,23 @@ class TypeWriter {
 	}
 }
 
+const fadeNavButton = () => {
+	const navButton = document.querySelector(".navigation__button");
+	const navBackground = document.querySelector(".navigation__background");
+
+	setTimeout(() => {
+		navButton.classList.add("fadeIn");
+		navBackground.classList.add("fadeIn");
+	}, 7600)
+}
+
 const init = () => {
 	setInterval(nextSlide, 5000);
 	collapseAndShow();
 	iconChangeOnLoad();
 	iconChange();
 	typeWriterEffect();
+	fadeNavButton();
 };
 
 document.addEventListener("DOMContentLoaded", loading);

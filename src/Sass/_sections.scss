@@ -24,7 +24,6 @@
 		margin-bottom: 3.5rem;
 		margin-right: auto;
 		margin-left: auto;
-		//NEW:
 		display: inline-block;
 	}
 
@@ -41,6 +40,9 @@
 }
 
 .info {
+	-ms-flex-item-align: center;
+	    align-self: center;
+
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -52,61 +54,16 @@
 		-ms-flex: 0 0 40%;
 		flex: 0 0 40%;
 		margin-right: 3.5rem;
-
-		& ul {
-			list-style: none;
-
-			& li {
-				font-family: 'Roboto', sans-serif;
-				margin-bottom: 3rem;
-			}
-
-			& a {
-				-webkit-backface-visibility: hidden;
-
-				backface-visibility: hidden;
-
-
-
-				&:link,
-				&:visited {
-					text-decoration: none;
-					color: #000;
-					-webkit-transition: all 0.3s ease;
-					transition: all 0.3s ease;
-					-webkit-animation: pulse 5s ease-in infinite;
-					animation: pulse 5s ease-in infinite;
-				}
-
-				&:hover,
-				&:active {
-					font-size: 4.75rem;
-				}
-			}
-		}
-
-		& a {}
 	}
 
 	&__right {
-		-webkit-box-flex: 0;
-		-ms-flex: 0 0 60%;
-		flex: 0 0 60%;
+		-webkit-box-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
 
 		&--title {
 			font-size: 5rem;
 			margin-bottom: 0.5rem;
-		}
-
-		ul {
-			margin-top: 3rem;
-			list-style: none;
-			font-size: 3.5rem;
-			text-align: center;
-
-			li {
-				margin-bottom: 3rem;
-			}
 		}
 
 		&--paragraph {
@@ -117,23 +74,24 @@
 	}
 }
 
+.info.other {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+
+	&>* {
+		margin-bottom: 2.5rem;
+	}
+}
+
 .info__cards {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
-
-	ul {
-		margin: 0 auto;
-		list-style: none;
-		text-align: center;
-
-		li {
-			width: 100%;
-			margin-bottom: 2rem;
-		}
-	}
 }
 
 .item {

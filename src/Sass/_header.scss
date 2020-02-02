@@ -32,6 +32,7 @@
 
 		&--secondary {
 			font-size: 4rem;
+			height: 4.5rem; // To give it a fixed witdth so that the button doesn't move up when there's not text, 
 		}
 	}
 

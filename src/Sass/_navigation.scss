@@ -44,13 +44,22 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
         height: 7rem;
         width: 7rem;
         position: fixed;
-        top: 6rem;
-        right: 6rem;
+        top: 3rem;
+        right: 3rem;
         border-radius: 50%;
         z-index: 2000; //NOTE: SHOULD ALWAYS BE ON TOP OF EVERYTHING
         -webkit-box-shadow: 0 1rem 3rem rgba($colour-noir, 0.1);
         box-shadow: 0 1rem 3rem rgba($colour-noir, 0.1);
         cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+
+        &.fadeIn {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     // THIS IS THE GREEN BACKGROUND THAT WILL EXPAND using scale()
@@ -59,8 +68,8 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
         width: 6rem;
         border-radius: 50%;
         position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
+        top: 3.5rem;
+        right: 3.5rem;
         background-image: -webkit-gradient(linear, left top, right bottom, from($colour-secondaire-light), to($colour-secondaire-dark));
         background-image: linear-gradient(to bottom right, $colour-secondaire-light, $colour-secondaire-dark);
         z-index: 1000; // NOTE: BE ON TOP OF MAIN CONTENT
@@ -68,6 +77,19 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
         transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
         transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
         transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+        -webkit-transition-delay: 0.2s;
+        transition-delay: 0.2s;
+
+
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+
+        &.fadeIn {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     &__nav {
@@ -79,6 +101,7 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
 
         opacity: 0;
         width: 0;
+
 
         // NOTE: We are animating opacity and NOT
         -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
