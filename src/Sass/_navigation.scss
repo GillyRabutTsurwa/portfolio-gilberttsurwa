@@ -77,14 +77,13 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
         transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
         transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
         transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-        // -webkit-transition-delay: 0.2s;
-        // transition-delay: 0.2s;
+
+
 
 
         opacity: 0;
         visibility: hidden;
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
+
 
         &.fadeIn {
             opacity: 1;
@@ -102,7 +101,6 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
         opacity: 0;
         width: 0;
 
-
         // NOTE: We are animating opacity and NOT
         -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -112,7 +110,7 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
             @include centre-absolute-elements();
             list-style: none;
             text-align: center;
-            float: right;
+            // float: right;
             width: 100%; //NEEDED for smooth closing transition
 
             &-item {
@@ -148,6 +146,15 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
         }
     }
 
+
+
+
+
+
+
+
+    // TOUT AU-DESSOUS EST BON
+
     // NOTE: General Sibling Selector. NOT adjacent.
     &__checkbox:checked~&__background {
         -webkit-transform: scale(80);
@@ -158,11 +165,6 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
         opacity: 1;
         width: 100%;
     }
-
-
-
-
-
 
     &__icon {
         position: relative;
