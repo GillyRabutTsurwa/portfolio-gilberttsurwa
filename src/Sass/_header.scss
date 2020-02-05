@@ -28,6 +28,10 @@
 			font-size: 15rem;
 			font-weight: 600;
 			text-transform: uppercase;
+
+			span {
+				display: block;
+			}
 		}
 
 		&--secondary {
