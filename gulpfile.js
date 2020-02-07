@@ -37,7 +37,7 @@ function style() {
 	//TODO: Find my SCSS file in src folder
 	return (
 		gulp
-			.src("./src/Sass/**/*.scss")
+			.src("./src/Sass/*.scss")
 			//TODO: Pass that file through Sass compiler - our gulp-sass package under the
 			// name sass handles this.
 			//TODO: Addition modify for better error output
@@ -102,7 +102,7 @@ function watch() {
 	});
 	//NOTE: parametres for gulp.watch = location to watch and name of the task
 	gulp.watch("./src/*.html", copyHTML);
-	gulp.watch("./src/Sass/**/*.scss", style);
+	gulp.watch("./src/Sass/*.scss", style);
 	gulp.watch("./src/Images/*", copyImages);
 	gulp.watch("./src/JS/index.js", transpileMinifyJS);
 	// gulp.watch("./dist/*.html").on("change", browserSync.reload);
