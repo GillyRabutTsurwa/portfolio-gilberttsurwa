@@ -3,6 +3,8 @@
 const gulp = require("gulp");
 //NOTE: Looks for Sass files and transpiles it to CSS
 const sass = require("gulp-sass");
+//NOTE: Minify HTML
+const htmlMin = require("gulp-htmlmin");
 //NOTE: Optimises and compresses JPEG images.... or so it seems
 const image = require("gulp-image");
 //NOTE: Minifies our CSS
@@ -21,11 +23,14 @@ const uglify = require("gulp-uglify");
 const browserSync = require("browser-sync").create();
 
 //TODO: COPY HTML FILES FROM SRC TO DIST USING A FUNCTION
-function copyHTML() {
+function minifyHTML() {
 	// gulp.src("location of file(s)/folder(s) we want to select")
 	return (
 		gulp
 			.src("./src/*.html")
+			.pipe(htmlMin({
+				collapseWhitespace: true
+			}))
 			// Where we want to output the copied HTML folder. In our case, in our dist folder
 			.pipe(gulp.dest("./dist/"))
 	);
@@ -101,7 +106,7 @@ function watch() {
 		}
 	});
 	//NOTE: parametres for gulp.watch = location to watch and name of the task
-	gulp.watch("./src/*.html", copyHTML);
+	gulp.watch("./src/*.html", minifyHTML);
 	gulp.watch("./src/Sass/*.scss", style);
 	gulp.watch("./src/Images/*", copyImages);
 	gulp.watch("./src/JS/index.js", transpileMinifyJS);
@@ -110,7 +115,7 @@ function watch() {
 	gulp.watch("./src/JS/index.js").on("change", browserSync.reload);
 }
 
-exports.copyHTML = copyHTML;
+exports.minifyHTML = minifyHTML;
 exports.style = style;
 exports.copyImages = copyImages;
 exports.watch = watch;

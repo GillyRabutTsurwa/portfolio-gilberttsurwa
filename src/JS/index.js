@@ -136,11 +136,20 @@ const fadeNavButton = () => {
 
 	setTimeout(() => {
 		navButton.classList.add("fadeIn");
-		navBackground.classList.add("fadeIn");
 	}, 7600)
+
+	setTimeout(() => {
+		navBackground.classList.add("fadeIn");
+	}, 8600);
 }
 
-const init = () => {
+// const spinReactLogo = () => {
+// 	const reactLogo = document.querySelector(".logo-react");
+// 	reactLogo.classList.add("rotate");
+// }
+
+
+function init() {
 	setInterval(nextSlide, 5000);
 	collapseAndShow();
 	iconChangeOnLoad();
