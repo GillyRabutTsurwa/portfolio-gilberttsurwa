@@ -94,3 +94,47 @@
 		transform: scale(1);
 	}
 }
+
+@-webkit-keyframes ellipsisFade {
+
+	0%,
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes ellipsisFade {
+
+	0%,
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.dot {
+	-webkit-animation: ellipsisFade 1.2s ease infinite;
+	animation: ellipsisFade 1.2s ease infinite;
+
+	&-one {
+		-webkit-animation-delay: 0.1s;
+		animation-delay: 0.1s;
+	}
+
+	&-two {
+		-webkit-animation-delay: 0.2s;
+		animation-delay: 0.2s;
+	}
+
+	&-three {
+		-webkit-animation-delay: 0.3s;
+		animation-delay: 0.3s;
+	}
+}
