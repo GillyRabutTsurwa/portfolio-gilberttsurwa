@@ -16,7 +16,7 @@
 
 	&__title {
 		position: absolute;
-		top: 15%;
+		top: 11%;
 		right: 5%;
 		display: inline-block;
 		text-align: right;
@@ -25,9 +25,10 @@
 		z-index: 1000;
 
 		&--primary {
-			font-size: 15rem;
+			font-size: 13rem;
 			font-weight: 600;
 			text-transform: uppercase;
+			padding-bottom: 2rem;
 
 			span {
 				display: block;
@@ -65,30 +66,71 @@
 
 			&:first-child {
 				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
-					url(../Images/artem-bali-682651-unsplash-min.jpg);
+					url(../Images/jakub-dziubak-XtUd5SiX464-unsplash.jpg);
 				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
-					url(../Images/artem-bali-682651-unsplash-min.jpg);
+					url(../Images/jakub-dziubak-XtUd5SiX464-unsplash.jpg);
+				// background-position: right 90% bottom 1px;
+				background-size: auto auto;
+				// background-position-x: left;
+
 			}
 
 			&:nth-child(2) {
 				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
-					url(../Images/brooke-lark-261793-unsplash-min.jpg);
+					url(../Images/megha-ajith-WRST5Pops3E-unsplash.jpg);
 				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
-					url(../Images/brooke-lark-261793-unsplash-min.jpg);
+					url(../Images/megha-ajith-WRST5Pops3E-unsplash.jpg);
+				background-position-y: 6%;
 			}
 
 			&:nth-child(3) {
 				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
-					url(../Images/erik-dungan-1079095-unsplash-min.jpg);
+					url(../Images/sarah-dorweiler-9Z1KRIfpBTM-unsplash.jpg);
 				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
-					url(../Images/erik-dungan-1079095-unsplash-min.jpg);
+					url(../Images/sarah-dorweiler-9Z1KRIfpBTM-unsplash.jpg);
+				background-position-y: 1%;
 			}
 
 			&:nth-child(4) {
 				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/brooke-lark-261793-unsplash-min.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/brooke-lark-261793-unsplash-min.jpg);
+			}
+
+			&:nth-child(5) {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/sarah-dorweiler-2-unsplash.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/sarah-dorweiler-2-unsplash.jpg);
+			}
+
+			&:nth-child(6) {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/pankaj-patel-3-unsplash.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/pankaj-patel-3-unsplash.jpg);
+			}
+
+			&:nth-child(7) {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/niko-photos-tGTVxeOr_Rs-unsplash.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/niko-photos-tGTVxeOr_Rs-unsplash.jpg);
+			}
+
+			&:nth-child(8) {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
 					url(../Images/ivan-timov-663072-unsplash-min.jpg);
 				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
 					url(../Images/ivan-timov-663072-unsplash-min.jpg);
+			}
+
+			&:nth-child(9) {
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(251, 219, 137, 0.6)), to(rgba(244, 137, 130, 0.6))),
+					url(../Images/pankaj-patel-1IW4HQuauSU-unsplash.jpg);
+				background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.6), rgba(244, 137, 130, 0.6)),
+					url(../Images/pankaj-patel-1IW4HQuauSU-unsplash.jpg);
 			}
 
 			&:last-child {

@@ -1,10 +1,11 @@
 .main-parts {
-	padding-right: 7rem;
+	padding: 0 4rem;
 	margin-bottom: 7rem;
 }
 
 .info__toggleAppear {
 	display: none;
+	padding: 3rem 0;
 }
 
 .info__toggleAppear.collapse {
@@ -21,9 +22,7 @@
 		font-size: 6rem;
 		cursor: pointer;
 		position: relative;
-		margin-bottom: 3.5rem;
-		margin-right: auto;
-		margin-left: auto;
+		margin: 2rem auto;
 		display: inline-block;
 	}
 
@@ -41,13 +40,12 @@
 
 .info {
 	-ms-flex-item-align: center;
-	    align-self: center;
+	align-self: center;
 
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	font-size: 4rem;
-	margin-right: 7rem;
 
 	&__left {
 		-webkit-box-flex: 0;
@@ -95,7 +93,7 @@
 }
 
 .item {
-	padding: 2rem 0 0 3rem;
+	// padding: 2rem 0 0 3rem;
 	margin-bottom: 1.5rem;
 	border-bottom: 1px solid #333;
 }

@@ -1,16 +1,16 @@
-const loading = () => {
-	setTimeout(() => {
-		document.querySelector(".loader").style.opacity = 0;
-		document.querySelector(".loader").style.display = "none";
+// const loading = () => {
+// 	setTimeout(() => {
+// 		document.querySelector(".loader").style.opacity = 0;
+// 		document.querySelector(".loader").style.display = "none";
 
-		document.querySelector(".maincontent").style.display = "block";
-		setTimeout(() => {
-			document.querySelector(".maincontent").style.opacity = 1;
-		},50)
-	},3800);
+// 		document.querySelector(".maincontent").style.display = "block";
+// 		setTimeout(() => {
+// 			document.querySelector(".maincontent").style.opacity = 1;
+// 		},50)
+// 	},3800);
 
-	init();
-}
+// 	init();
+// }
 
 const nextSlide = () => {
 	const slides = document.querySelectorAll(".header__slider--slide");
@@ -143,19 +143,31 @@ const fadeNavButton = () => {
 	}, 8600);
 }
 
-// const spinReactLogo = () => {
-// 	const reactLogo = document.querySelector(".logo-react");
-// 	reactLogo.classList.add("rotate");
-// }
 
-
-function init() {
-	setInterval(nextSlide, 5000);
+const init = () => {
+	setTimeout(() => {
+		setInterval(nextSlide, 5000);
+	}, 3800);
+	
 	collapseAndShow();
 	iconChangeOnLoad();
 	iconChange();
 	typeWriterEffect();
 	fadeNavButton();
 };
+
+const loading = () => {
+	setTimeout(() => {
+		document.querySelector(".loader").style.opacity = 0;
+		document.querySelector(".loader").style.display = "none";
+
+		document.querySelector(".maincontent").style.display = "block";
+		setTimeout(() => {
+			document.querySelector(".maincontent").style.opacity = 1;
+		},50)
+	},3800);
+
+	init();
+}
 
 document.addEventListener("DOMContentLoaded", loading);
