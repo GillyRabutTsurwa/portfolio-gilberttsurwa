@@ -65,7 +65,7 @@ const iconChange = () => {
 	// This will in turn change the class
 	console.log(icon.getAttribute("class"));
 
-	let iconArray = ["html5-plain", "css3-plain", "javascript-plain", "bootstrap-plain", "sass-original", "jquery-plain", "nodejs-plain", "express-original-wordmark", "mongodb-plain-wordmark", "git-plain", "github-plain", "webpack-plain", "babel-plain", "heroku-original-wordmark", "gulp-plain"];
+	let iconArray = ["html5-plain", "css3-plain", "javascript-plain", "vuejs-plain", "bootstrap-plain", "sass-original", "jquery-plain", "nodejs-plain", "express-original-wordmark", "mongodb-plain-wordmark", "git-plain", "github-plain", "webpack-plain", "babel-plain", "heroku-original-wordmark", "gulp-plain"];
 
 	const oneByOne = () => {
 		iconArray.forEach((currentIcon, index) => {
