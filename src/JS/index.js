@@ -1,17 +1,3 @@
-// const loading = () => {
-// 	setTimeout(() => {
-// 		document.querySelector(".loader").style.opacity = 0;
-// 		document.querySelector(".loader").style.display = "none";
-
-// 		document.querySelector(".maincontent").style.display = "block";
-// 		setTimeout(() => {
-// 			document.querySelector(".maincontent").style.opacity = 1;
-// 		},50)
-// 	},3800);
-
-// 	init();
-// }
-
 const nextSlide = () => {
 	const slides = document.querySelectorAll(".header__slider--slide");
 	const current = document.querySelector(".current");
@@ -38,7 +24,6 @@ const collapseAndShow = () => {
 
 	$(".info__heading").each(function(index) {
 		$(this).click(function() {
-			// IMPORTANT:NOTE: Order of the code matters. This worked but the reverse didn't. Attention !
 			$(".info__toggleAppear").eq(index).slideToggle("slow");
 			$(".info__toggleAppear").eq(index).toggleClass("collapse");
 		});
@@ -60,17 +45,12 @@ const iconChangeOnLoad = () => {
 
 const iconChange = () => {
 	let icon = document.querySelector("#devicon");
-	// NOTE: Current class of the icon is: devicon-html5-plain`;
-	//GOAL: Is to extract the "html5 portion and use names in an array to change the classname"
-	// This will in turn change the class
-	console.log(icon.getAttribute("class"));
 
 	let iconArray = ["html5-plain", "css3-plain", "javascript-plain", "vuejs-plain", "bootstrap-plain", "sass-original", "jquery-plain", "nodejs-plain", "express-original-wordmark", "mongodb-plain-wordmark", "git-plain", "github-plain", "webpack-plain", "babel-plain", "heroku-original-wordmark", "gulp-plain"];
 
 	const oneByOne = () => {
 		iconArray.forEach((currentIcon, index) => {
 			setInterval(() => {
-				// icon.setAttribute("class", `devicon-${currentIcon}-plain`);
 				icon.setAttribute("class", `devicon-${currentIcon}`);
 			}, 3800 * (index + 1));
 		});
@@ -82,7 +62,6 @@ const iconChange = () => {
 const typeWriterEffect = () => {
 	const textElement = document.querySelector(".text-type");
 	const words = JSON.parse(textElement.getAttribute("data-words"));
-	// console.log(words); //TESTING:
 	const wait = textElement.getAttribute("data-wait");
 	new TypeWriter(textElement, words, wait);
 };
@@ -171,3 +150,5 @@ const loading = () => {
 }
 
 document.addEventListener("DOMContentLoaded", loading);
+
+
