@@ -11,8 +11,7 @@ const nextSlide = () => {
 		slides[0].classList.add("current");
 	}
 	setTimeout(() => current.classList.remove("current"));
-}
-
+};
 
 const collapseAndShow = () => {
 	let infoTitle = document.querySelectorAll(".info__heading");
@@ -32,21 +31,51 @@ const collapseAndShow = () => {
 
 const iconChangeOnLoad = () => {
 	let icon = document.querySelector("#deviconLoad");
-	let iconArray = ["html5-plain", "css3-plain", "javascript-plain", "bootstrap-plain", "sass-original", "jquery-plain", "nodejs-plain", "express-original-wordmark", "mongodb-plain-wordmark", "git-plain", "github-plain", "webpack-plain", "babel-plain", "heroku-original-wordmark", "gulp-plain"];
+	let iconArray = [
+		"html5-plain",
+		"css3-plain",
+		"javascript-plain",
+		"bootstrap-plain",
+		"sass-original",
+		"jquery-plain",
+		"nodejs-plain",
+		"express-original-wordmark",
+		"mongodb-plain-wordmark",
+		"git-plain",
+		"github-plain",
+		"webpack-plain",
+		"babel-plain",
+		"heroku-original-wordmark",
+		"gulp-plain"
+	];
 	let randomIndex = iconArray[Math.floor(Math.random() * iconArray.length)];
 
 	iconArray.forEach((currentIcon, index) => {
-			icon.setAttribute("class", `devicon-${randomIndex}`);
+		icon.setAttribute("class", `devicon-${randomIndex}`);
 	});
-
-
-
-}
+};
 
 const iconChange = () => {
 	let icon = document.querySelector("#devicon");
 
-	let iconArray = ["html5-plain", "css3-plain", "javascript-plain", "vuejs-plain", "bootstrap-plain", "sass-original", "jquery-plain", "nodejs-plain", "express-original-wordmark", "mongodb-plain-wordmark", "git-plain", "github-plain", "webpack-plain", "babel-plain", "heroku-original-wordmark", "gulp-plain"];
+	let iconArray = [
+		"html5-plain",
+		"css3-plain",
+		"javascript-plain",
+		"vuejs-plain",
+		"bootstrap-plain",
+		"sass-original",
+		"jquery-plain",
+		"nodejs-plain",
+		"express-original-wordmark",
+		"mongodb-plain-wordmark",
+		"git-plain",
+		"github-plain",
+		"webpack-plain",
+		"babel-plain",
+		"heroku-original-wordmark",
+		"gulp-plain"
+	];
 
 	const oneByOne = () => {
 		iconArray.forEach((currentIcon, index) => {
@@ -65,7 +94,6 @@ const typeWriterEffect = () => {
 	const wait = textElement.getAttribute("data-wait");
 	new TypeWriter(textElement, words, wait);
 };
-
 
 class TypeWriter {
 	constructor(textElement, words, wait = 3000) {
@@ -115,19 +143,18 @@ const fadeNavButton = () => {
 
 	setTimeout(() => {
 		navButton.classList.add("fadeIn");
-	}, 7600)
+	}, 7600);
 
 	setTimeout(() => {
 		navBackground.classList.add("fadeIn");
 	}, 8600);
-}
-
+};
 
 const init = () => {
 	setTimeout(() => {
 		setInterval(nextSlide, 5000);
 	}, 3800);
-	
+
 	collapseAndShow();
 	iconChangeOnLoad();
 	iconChange();
@@ -143,12 +170,10 @@ const loading = () => {
 		document.querySelector(".maincontent").style.display = "block";
 		setTimeout(() => {
 			document.querySelector(".maincontent").style.opacity = 1;
-		},50)
-	},3800);
+		}, 50);
+	}, 3800);
 
 	init();
-}
+};
 
 document.addEventListener("DOMContentLoaded", loading);
-
-

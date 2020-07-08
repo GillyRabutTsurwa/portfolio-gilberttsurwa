@@ -18,32 +18,20 @@
 	font-size: 1.5rem;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #000;
+	color: #FFF;
 	padding: 1.5rem 3rem;
 	margin-top: 3rem;
-	background-image: -webkit-gradient(linear, left top, right bottom, from(rgb(247, 140, 140)), to(rgb(243, 247, 197)));
-	background-image: linear-gradient(to bottom right, rgb(247, 140, 140), rgb(243, 247, 197));
+	background-color: #1A2934;
 	cursor: pointer;
 
-	-webkit-animation: pulseHeaderButton 5s ease-in 2.5s infinite;
 
-	animation: pulseHeaderButton 5s ease-in 2.5s infinite;
-
-	-webkit-transition: all 0.5s ease-in;
-
-	transition: all 0.5s ease-in;
-
-	&:focus {
-		outline: none;
-	}
+	// &:focus {
+	// 	outline: none;
+	// }
 
 	&:hover {
-		background-image: -webkit-gradient(linear, right bottom, left top, from(rgb(247, 140, 140)), to(rgb(243, 247, 197)));
-		background-image: linear-gradient(to top left, rgb(247, 140, 140), rgb(243, 247, 197));
-		-webkit-animation-play-state: paused;
-		        animation-play-state: paused;
-
-
+		background-color: #FFF;
+		color: #1A2934;
 	}
 }
 

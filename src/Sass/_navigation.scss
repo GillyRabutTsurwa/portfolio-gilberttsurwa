@@ -70,15 +70,13 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
         position: fixed;
         top: 3.5rem;
         right: 3.5rem;
-        background-image: -webkit-gradient(linear, left top, right bottom, from($colour-secondaire-light), to($colour-secondaire-dark));
-        background-image: linear-gradient(to bottom right, $colour-secondaire-light, $colour-secondaire-dark);
+        background-image: -webkit-gradient(linear, left bottom, right top, from(#1a2934), to(#1a2934de));
+        background-image: linear-gradient(to top right, #1a2934, #1a2934de);
         z-index: 1000; // NOTE: BE ON TOP OF MAIN CONTENT
         -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
         transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
         transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
         transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-
-
 
 
         opacity: 0;
@@ -138,7 +136,7 @@ $default-box-shadow: 0 1rem 2rem rgba($colour-noir, 0.15);
                 &:hover,
                 &:active {
                     background-position: 100%;
-                    color: $colour-secondaire-light;
+                    color: #1A2934;
                     -webkit-transform: translateX(1rem);
                     transform: translateX(1rem);
                 }
