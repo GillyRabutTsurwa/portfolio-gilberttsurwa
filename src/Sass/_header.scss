@@ -2,7 +2,6 @@
 	// height: 100vh; already is in base.scss
 	width: 100%;
 	position: relative;
-	background-color: #1a2934;
 
 	& #devicon {
 		display: block;
@@ -11,6 +10,7 @@
 		left: 3rem;
 		font-size: 9.5rem;
 		z-index: 1000;
+		color: rgb(247, 247, 247);
 		-webkit-animation: fade 3800ms ease-in-out infinite;
 		animation: fade 3800ms ease-in-out infinite;
 	}

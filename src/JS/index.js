@@ -13,21 +13,22 @@ const nextSlide = () => {
 	setTimeout(() => current.classList.remove("current"));
 };
 
-const collapseAndShow = () => {
-	let infoTitle = document.querySelectorAll(".info__heading");
-	infoTitle.forEach(function(currentValue, index) {
-		currentValue.addEventListener("click", function() {
-			this.classList.toggle("toggled");
-		});
-	});
+// NOTE: will delete. won't use this in this version of site
+// const collapseAndShow = () => {
+// 	let infoTitle = document.querySelectorAll(".info__heading");
+// 	infoTitle.forEach(function(currentValue, index) {
+// 		currentValue.addEventListener("click", function() {
+// 			this.classList.toggle("toggled");
+// 		});
+// 	});
 
-	$(".info__heading").each(function(index) {
-		$(this).click(function() {
-			$(".info__toggleAppear").eq(index).slideToggle("slow");
-			$(".info__toggleAppear").eq(index).toggleClass("collapse");
-		});
-	});
-};
+// 	$(".info__heading").each(function(index) {
+// 		$(this).click(function() {
+// 			$(".info__toggleAppear").eq(index).slideToggle("slow");
+// 			$(".info__toggleAppear").eq(index).toggleClass("collapse");
+// 		});
+// 	});
+// };
 
 const iconChangeOnLoad = () => {
 	let icon = document.querySelector("#deviconLoad");
@@ -155,7 +156,7 @@ const init = () => {
 		setInterval(nextSlide, 5000);
 	}, 3800);
 
-	collapseAndShow();
+	// collapseAndShow();
 	iconChangeOnLoad();
 	iconChange();
 	typeWriterEffect();
