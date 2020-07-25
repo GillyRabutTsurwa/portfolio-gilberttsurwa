@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Kulim+Park:400,400i,600,600i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import "../abstract/mixins";
+
+// this is for when he highlight text
+::selection {
+	background: rgb(238, 238, 238);
+	color: #1a2934;
+}
+
+* {
+	&,
+	&::before,
+	&::after {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+
+html,
+body {
+	height: 100vh; // needed for scrolling... I think. testing needed
+}
+
+html {
+	font-size: 62.5%;
+
+	@include responsive(tablet-landscape) {
+		font-size: 56.25%; // 1rem = 9px; 9px/16px = 56.25%;
+	}
+
+	@include responsive(tablet-portrait) {
+		font-size: 50%; // 1rem = 8px; 8px/16px = 50%;
+	}
+
+	// Don't need this
+	// @include responsive(phone) {
+	//     font-size: 30%;
+	// }
+
+	@include responsive(big-desktop) {
+		font-size: 80%; // 1 rem = 12px; 12px/16px = 75%
+	}
+}
+
+body {
+	// TESTING:
+	// background-image: -webkit-gradient(linear, left top, right bottom, from(#1a2934), to(#1a2934));
+	// background-image: linear-gradient(to right bottom, #1a2934, #1a2934);
+	font-family: 'Kulim Park', Arial, Helvetica, sans-serif;
+	position: relative; // TESTING: TEMPORARY
+	// keep background-color for now et continuer a tester
+	background-color: #1a2934;
+	color: rgb(255, 255, 255);
+}
+
+.loader {
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+	z-index: 5000; // To hide the nav button when load page is running//NOTE: REMEMBER. NEED TO SET A POSITION
+	-webkit-transition: opacity 2s ease-in;
+	-webkit-transition: opacity 2s ease-in;
+	transition: opacity 2s ease-in;
+
+	background-color: #1a2934;
+	color: rgb(238, 238, 238);
+
+	& i {
+		font-size: 40rem;
+	}
+}
+
+.maincontent {
+	opacity: 0;
+	display: none;
+	position: relative;
+	z-index: 500;
+	background-color: rgb(238, 238, 238);
+	color: #1a2934;
+
+	// TESTING:
+	height: 100vh;
+	overflow-y: scroll;
+	-ms-scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;
+	// -ms-scroll-snap-points-y: repeat(100vh);
+	// scroll-snap-points-y: repeat(100vh);
+	-webkit-transition: opacity 0.2s ease-in;
+	-webkit-transition: opacity 2s ease-in;
+	transition: opacity 2s ease-in;
+
+	& > *:not(h2):not(.footer) {
+		height: 100vh;
+		// not sure if i want scroll snap on or not. je vais decider
+		// -ms-scroll-snap-align: center;
+		// scroll-snap-align: center;
+	}
+}
+
+//move me and everything below me
+
+
+
+
+

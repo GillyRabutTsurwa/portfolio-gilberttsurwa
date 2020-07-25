@@ -1,3 +1,25 @@
+.columns {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.skills {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+
+	gap: 4rem;
+	color: rgb(238, 238, 238);
+}
+
+.credentials {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+
 // .main-parts {
 // 	padding: 0 4rem;
 // 	margin-bottom: 7rem;
@@ -12,7 +34,7 @@
 // 	display: -ms-flexbox;
 // 	display: flex;
 // 	cursor: pointer;
-
+ 
 // 	&--title {
 // 		font-size: 6rem;
 // 		cursor: pointer;

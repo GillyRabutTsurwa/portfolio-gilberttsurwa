@@ -7,70 +7,63 @@ const uglify = require("gulp-uglify");
 const browserSync = require("browser-sync").create();
 
 function minifyHTML() {
-	return (
-		gulp
-			.src("./src/*.html")
-			.pipe(htmlMin({
+	return gulp
+		.src("./src/*.html")
+		.pipe(
+			htmlMin({
 				collapseWhitespace: true
-			}))
-			.pipe(gulp.dest("./dist/"))
-	);
+			})
+		)
+		.pipe(gulp.dest("./dist/"));
 }
 
 function style() {
-	return (
-		gulp
-			.src("./src/Sass/*.scss")
-			.pipe(sass().on("error", sass.logError))
-			.pipe(cleanCSS())
-			.pipe(gulp.dest("./dist/CSS"))
-			.pipe(browserSync.stream())
-	);
+	return gulp
+		.src("./src/sass/**/*.scss")
+		.pipe(sass().on("error", sass.logError))
+		.pipe(cleanCSS())
+		.pipe(gulp.dest("./dist/css"))
+		.pipe(browserSync.stream());
 }
 
 function copyImages() {
-	return gulp.src("./src/Images/*").pipe(gulp.dest("./dist/Images"));
+	return gulp.src("./src/images/*").pipe(gulp.dest("./dist/images"));
 }
 
 function copyIcons() {
-	return (
-		gulp
-			.src("./src/Icons/**/*")
-			.pipe(gulp.dest("./dist/Icons"))
-	);
+	return gulp.src("./src/icons/**/*").pipe(gulp.dest("./dist/icons"));
 }
 
 function transpileMinifyJS() {
-	return (
-		gulp
-			.src("./src/JS/index.js")
-			.pipe(
-				babel({
-					presets: [ "@babel/preset-env" ]
-				})
-			)
-			.pipe(uglify())
-			.pipe(gulp.dest("./dist/JS"))
-	);
+	return gulp
+		.src("./src/js/index.js")
+		.pipe(
+			babel({
+				presets: [ "@babel/preset-env" ]
+			})
+		)
+		.pipe(uglify())
+		.pipe(gulp.dest("./dist/JS"));
 }
 
 function watch() {
 	browserSync.init({
 		server: {
 			baseDir: "./dist"
-		}
+		},
+		browser: "firefox"
 	});
 	gulp.watch("./src/*.html", minifyHTML);
-	gulp.watch("./src/Sass/*.scss", style);
-	gulp.watch("./src/Images/*", copyImages);
-	gulp.watch("./src/JS/index.js", transpileMinifyJS);
+	gulp.watch("./src/sass/**/*.scss", style);
+	gulp.watch("./src/images/*", copyImages);
+	gulp.watch("./src/js/index.js", transpileMinifyJS);
 	gulp.watch("./src/*.html").on("change", browserSync.reload);
-	gulp.watch("./src/JS/index.js").on("change", browserSync.reload);
+	gulp.watch("./src/js/index.js").on("change", browserSync.reload);
 }
 
 exports.minifyHTML = minifyHTML;
 exports.style = style;
 exports.copyImages = copyImages;
-exports.watch = watch;
 exports.transpileMinifyJS = transpileMinifyJS;
 exports.copyIcons = copyIcons;
+exports.watch = watch;
