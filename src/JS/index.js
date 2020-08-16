@@ -13,23 +13,6 @@ const nextSlide = () => {
 	setTimeout(() => current.classList.remove("current"));
 };
 
-// NOTE: will delete. won't use this in this version of site
-// const collapseAndShow = () => {
-// 	let infoTitle = document.querySelectorAll(".info__heading");
-// 	infoTitle.forEach(function(currentValue, index) {
-// 		currentValue.addEventListener("click", function() {
-// 			this.classList.toggle("toggled");
-// 		});
-// 	});
-
-// 	$(".info__heading").each(function(index) {
-// 		$(this).click(function() {
-// 			$(".info__toggleAppear").eq(index).slideToggle("slow");
-// 			$(".info__toggleAppear").eq(index).toggleClass("collapse");
-// 		});
-// 	});
-// };
-
 const iconChangeOnLoad = () => {
 	let icon = document.querySelector("#deviconLoad");
 	let iconArray = [
@@ -51,7 +34,7 @@ const iconChangeOnLoad = () => {
 	];
 	let randomIndex = iconArray[Math.floor(Math.random() * iconArray.length)];
 
-	iconArray.forEach((currentIcon, index) => {
+	iconArray.forEach(() => {
 		icon.setAttribute("class", `devicon-${randomIndex}`);
 	});
 };
@@ -151,16 +134,45 @@ const fadeNavButton = () => {
 	}, 8600);
 };
 
+const openFlexSliders = () => {
+	const parentOfSlides = document.querySelector(".slider");
+	const slides = [ ...parentOfSlides.children ];
+
+	// slides.forEach((currentSlide) => {
+	// 	currentSlide.addEventListener("click", (e) => {
+	// 		// currentSlide.classList.add("open");
+	// 		console.log(e.target);
+	// 		if (currentSlide.classList.contains("open")) {
+	// 			currentSlide.classList.remove("open");
+	// 		}
+	// 		e.target.classList.add("open");
+	// 	});
+	// });
+
+	//NOTE: will probably delete this comment later:
+	// PERFECC:  👍🏿
+	parentOfSlides.addEventListener("click", (e) => {
+		slides.forEach((currentSlide) => {
+			currentSlide.classList.remove("open");
+		});
+
+		if (e.target.classList.contains("slide")) {
+			e.target.classList.add("open");
+		}
+		// e.target.classList.toggle("open");
+	});
+};
+
 const init = () => {
 	setTimeout(() => {
 		setInterval(nextSlide, 5000);
 	}, 3800);
 
-	// collapseAndShow();
 	iconChangeOnLoad();
 	iconChange();
 	typeWriterEffect();
 	fadeNavButton();
+	openFlexSliders();
 };
 
 const loading = () => {
@@ -177,4 +189,5 @@ const loading = () => {
 	init();
 };
 
-document.addEventListener("DOMContentLoaded", loading);
+// will delete soon. But i replaced document.addEventListener("DOMContentLoaded", loading) with code below. Apparently there is a difference.
+window.addEventListener("load", loading);

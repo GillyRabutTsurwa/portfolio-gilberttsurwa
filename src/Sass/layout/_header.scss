@@ -10,7 +10,7 @@
 		left: 3rem;
 		font-size: 9.5rem;
 		z-index: 1000;
-		color: rgb(247, 247, 247);
+		color: #1a2934;
 		-webkit-animation: fade 3800ms ease-in-out infinite;
 		animation: fade 3800ms ease-in-out infinite;
 	}
@@ -39,70 +39,43 @@
 			}
 
 			&:first-child {
-				background-image: -webkit-gradient(linear, left top, right bottom, from(#1a29347a), to(#1a29343b)),
-					url(../Images/adrian.jpg);
-				background-image: linear-gradient(to right bottom, #1a29347a, #1a29343b),
-					url(../Images/adrian.jpg);
+				background-image: url(../Images/adrian.jpg);
 			}
 
 			&:nth-child(2) {
-				background-image: -webkit-gradient(linear, left top, right bottom, from(#1a29347a), to(#1a29343b)),
-					url(../Images/robin-spielmann-birds-flying.jpg);
-				background-image: linear-gradient(to right bottom, #1a29347a, #1a29343b),
-					url(../Images/robin-spielmann-birds-flying.jpg);
+				background-image: url(../Images/robin-spielmann-birds-flying.jpg);
 			}
 
 			&:nth-child(3) {
-				background-image: -webkit-gradient(linear, left top, right bottom, from(#1a29347a), to(#1a29343b)),
-					url(../Images/michael-calamas-camera-lens.jpg);
-				background-image: linear-gradient(to right bottom, #1a29347a, #1a29343b),
-					url(../Images/michael-calamas-camera-lens.jpg);
+				background-image: url(../Images/michael-calamas-camera-lens.jpg);
 				background-position-y: 1%;
 			}
 
 			&:nth-child(4) {
-				background-image: -webkit-gradient(linear, left top, right bottom, from(#1a29347a), to(#1a29343b)),
-					url(../Images/brooke-lark.jpg);
-				background-image: linear-gradient(to right bottom, #1a29347a, #1a29343b),
-					url(../Images/brooke-lark.jpg);
+				background-image: url(../Images/brooke-lark.jpg);
 			}
 
 			&:nth-child(5) {
-				background-image: -webkit-gradient(linear, left top, right bottom, from(#1a29347a), to(#1a29343b)),
-					url(../Images/sarah-dorweiler-2.jpg);
-				background-image: linear-gradient(to right bottom, #1a29347a, #1a29343b),
-					url(../Images/sarah-dorweiler-2.jpg);
+				background-image: url(../Images/sarah-dorweiler-2.jpg);
 			}
 
 			&:nth-child(6) {
-				background-image: -webkit-gradient(linear, left top, right bottom, from(#1a29347a), to(#1a29343b)),
-					url(../Images/men-on-boat.jpg);
-				background-image: linear-gradient(to right bottom, #1a29347a, #1a29343b),
-					url(../Images/men-on-boat.jpg);
+				background-image: url(../Images/men-on-boat.jpg);
 				background-position-x: 20%;
 			}
 
 			&:nth-child(7) {
-				background-image: -webkit-gradient(linear, left top, right bottom, from(#1a29347a), to(#1a29343b)),
-					url(../Images/joanna-kosinska-2.jpg);
-				background-image: linear-gradient(to right bottom, #1a29347a, #1a29343b),
-					url(../Images/joanna-kosinska-2.jpg);
+				background-image: url(../Images/joanna-kosinska-2.jpg);
 				background-position-y: 100%;
 			}
 
 			&:nth-child(8) {
-				background-image: -webkit-gradient(linear, left top, right bottom, from(#1a29347a), to(#1a29343b)),
-					url(../Images/sarah-dorweiler.jpg);
-				background-image: linear-gradient(to right bottom, #1a29347a, #1a29343b),
-					url(../Images/sarah-dorweiler.jpg);
+				background-image: url(../Images/sarah-dorweiler.jpg);
 				background-position-y: 1%;
 			}
 
 			&:nth-child(9) {
-				background-image: -webkit-gradient(linear, left top, right bottom, from(#1a29347a), to(#1a29343b)),
-					url(../Images/kate-treadway-twiga.jpg);
-				background-image: linear-gradient(to right bottom, #1a29347a, #1a29343b),
-					url(../Images/kate-treadway-twiga.jpg);
+				background-image: url(../Images/kate-treadway-twiga.jpg);
 				background-position-y: 100%;
 			}
 		}

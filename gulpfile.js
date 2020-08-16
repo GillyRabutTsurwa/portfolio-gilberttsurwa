@@ -11,7 +11,8 @@ function minifyHTML() {
 		.src("./src/*.html")
 		.pipe(
 			htmlMin({
-				collapseWhitespace: true
+				collapseWhitespace: true,
+				removeComments: true
 			})
 		)
 		.pipe(gulp.dest("./dist/"));
@@ -51,7 +52,7 @@ function watch() {
 		server: {
 			baseDir: "./dist"
 		},
-		browser: "firefox"
+		browser: "google chrome"
 	});
 	gulp.watch("./src/*.html", minifyHTML);
 	gulp.watch("./src/sass/**/*.scss", style);
