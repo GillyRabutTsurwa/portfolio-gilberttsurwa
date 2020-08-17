@@ -79,6 +79,56 @@ const typeWriterEffect = () => {
 	new TypeWriter(textElement, words, wait);
 };
 
+// TESTING:
+const chart = document.getElementById("myFirstChart").getContext("2d");
+
+let myChart = new Chart(chart, {
+	type: "radar",
+	data: {
+		labels: [
+			"CSS/Sass",
+			"Javascript",
+			"Typescript",
+			"Vue",
+			"React",
+			"Svelte",
+			"Tailwind",
+			"Bootstrap",
+			"Gulp",
+			"Webpack"
+		],
+		datasets: [
+			{
+				label: "Comfort Levels",
+				data: [ 84, 73, 49, 67, 45, 58, 68, 42, 60, 46 ],
+				backgroundColor: "rgba(26, 41, 52, 0.5)"
+			}
+		],
+		borderColor: "red"
+	},
+	options: {
+		scale: {
+			ticks: {
+				display: true,
+				// Voila. I've found at how to get rid of that square background of the numbers. It's the backdropColor property under ticks, under options and you assign it a colour. I just did it to transparent
+				//TODO: Make sure to add this in your chartjs learning repo.
+				// * So glad I found it
+				backdropColor: "transparent",
+				fontColor: "rgba(26,41,52,0.6)",
+
+				beginAtZero: true,
+				max: 100
+			},
+			pointLabels: {
+				fontSize: 14, // fontSize is ok
+				// don't know if i like it with or without
+				//fontColor: "#1a2934", // fontColor is accessible
+				fontFamily: "'Jost', 'sans-serif'"
+			}
+		}
+	}
+});
+
 class TypeWriter {
 	constructor(textElement, words, wait = 3000) {
 		this.textElement = textElement;
@@ -138,26 +188,13 @@ const openFlexSliders = () => {
 	const parentOfSlides = document.querySelector(".slider");
 	const slides = [ ...parentOfSlides.children ];
 
-	// slides.forEach((currentSlide) => {
-	// 	currentSlide.addEventListener("click", (e) => {
-	// 		// currentSlide.classList.add("open");
-	// 		console.log(e.target);
-	// 		if (currentSlide.classList.contains("open")) {
-	// 			currentSlide.classList.remove("open");
-	// 		}
-	// 		e.target.classList.add("open");
-	// 	});
-	// });
-
-	//NOTE: will probably delete this comment later:
-	// PERFECC:  👍🏿
 	parentOfSlides.addEventListener("click", (e) => {
 		slides.forEach((currentSlide) => {
 			currentSlide.classList.remove("open");
 		});
 
 		if (e.target.classList.contains("slide")) {
-			e.target.classList.add("open");
+			e.target.classList.toggle("open");
 		}
 		// e.target.classList.toggle("open");
 	});

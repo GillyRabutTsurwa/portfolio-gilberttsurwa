@@ -36,15 +36,18 @@ function copyIcons() {
 }
 
 function transpileMinifyJS() {
-	return gulp
-		.src("./src/js/index.js")
-		.pipe(
+	return (
+		gulp
+			.src("./src/js/*.js")
+			/**
+		 * .pipe(
 			babel({
 				presets: [ "@babel/preset-env" ]
 			})
 		)
-		.pipe(uglify())
-		.pipe(gulp.dest("./dist/JS"));
+		 */
+			.pipe(gulp.dest("./dist/JS"))
+	);
 }
 
 function watch() {
@@ -57,8 +60,9 @@ function watch() {
 	gulp.watch("./src/*.html", minifyHTML);
 	gulp.watch("./src/sass/**/*.scss", style);
 	gulp.watch("./src/images/*", copyImages);
-	gulp.watch("./src/js/index.js", transpileMinifyJS);
+	gulp.watch("./src/js/*.js", transpileMinifyJS);
 	gulp.watch("./src/*.html").on("change", browserSync.reload);
+
 	gulp.watch("./src/js/index.js").on("change", browserSync.reload);
 }
 
