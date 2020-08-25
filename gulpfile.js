@@ -35,6 +35,10 @@ function copyIcons() {
 	return gulp.src("./src/icons/**/*").pipe(gulp.dest("./dist/icons"));
 }
 
+function copyDocs() {
+	return gulp.src("./src/docs/*").pipe(gulp.dest("./dist/docs"));
+}
+
 function transpileMinifyJS() {
 	return (
 		gulp
@@ -62,7 +66,7 @@ function watch() {
 	gulp.watch("./src/images/*", copyImages);
 	gulp.watch("./src/js/*.js", transpileMinifyJS);
 	gulp.watch("./src/*.html").on("change", browserSync.reload);
-
+	// no need to watch copydocs
 	gulp.watch("./src/js/index.js").on("change", browserSync.reload);
 }
 
@@ -71,4 +75,5 @@ exports.style = style;
 exports.copyImages = copyImages;
 exports.transpileMinifyJS = transpileMinifyJS;
 exports.copyIcons = copyIcons;
+exports.copyDocs = copyDocs;
 exports.watch = watch;
