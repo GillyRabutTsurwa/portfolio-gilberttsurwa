@@ -187,6 +187,7 @@ const fadeNavButton = () => {
 const openFlexSliders = () => {
 	const parentOfSlides = document.querySelector(".slider");
 	const slides = [ ...parentOfSlides.children ];
+	console.log(slides);
 
 	parentOfSlides.addEventListener("click", (e) => {
 		slides.forEach((currentSlide) => {

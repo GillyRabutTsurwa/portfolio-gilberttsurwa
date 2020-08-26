@@ -50,7 +50,7 @@ function transpileMinifyJS() {
 			})
 		)
 		 */
-			.pipe(gulp.dest("./dist/JS"))
+			.pipe(gulp.dest("./dist/js"))
 	);
 }
 
